@@ -16,7 +16,7 @@ in the Server field and click connect. The chat client uses a dynamic port for i
 
 Once connected to the server, you can see all other connected clients in the right hand frame. As new clients join and leave, the frame will update accordingly.
 
-------------------------------------
+
 Using the chat client:
 
 You can type messages into the message box and click send to send messages to everyone connected to the chat server. Messages from other clients will be routed
@@ -29,7 +29,7 @@ You can now send a direct message to a user by appending the "@" and then their 
 Ex. @User Hello there!
 
 You can adjust the font size of the chat client by using the Edit>Font context menu. This is mostly a placeholder for that setting until I have finished the Options menu.
------------------------------------
+
 Text Color:
 
 Red -- System message stating an error or server disconnect
