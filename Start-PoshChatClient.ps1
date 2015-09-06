@@ -6,9 +6,9 @@ $ps = [PowerShell]::Create()
 $ps.Runspace = $rs
 $ps.Runspace.SessionStateProxy.SetVariable("pwd",$pwd)
 $handle = $ps.AddScript({   
-    Add-Type –assemblyName PresentationFramework
-    Add-Type –assemblyName PresentationCore
-    Add-Type –assemblyName WindowsBase     
+    Add-Type assemblyName PresentationFramework
+    Add-Type assemblyName PresentationCore
+    Add-Type assemblyName WindowsBase     
     ##Functions
     Function Open-PoshChatAbout {
 	    $rs=[RunspaceFactory]::CreateRunspace()
@@ -32,7 +32,7 @@ $handle = $ps.AddScript({
             </Window.Background>     
             <StackPanel>
                     <Label FontWeight = 'Bold' FontSize = '20'>PowerShell Chat </Label>
-                    <Label FontWeight = 'Bold' FontSize = '16' Padding = '0'> Version: 1.0 </Label>
+                    <Label FontWeight = 'Bold' FontSize = '16' Padding = '0'> Version: 1.1 </Label>
                     <Label FontWeight = 'Bold' FontSize = '16' Padding = '0'> Created By: Boe Prox </Label>
                     <Label Padding = '10'> <Hyperlink x:Name = 'AuthorLink'> http://learn-powershell.net </Hyperlink> </Label>
                     <Button x:Name = 'CloseButton' Width = '100'> Close </Button>
@@ -363,7 +363,7 @@ $ConnectButton.Add_Click({
                         #While client is connected to server, check for incoming traffic
                         While ($client.Connected) {        
                             Try {                
-                                [byte[]]$inStream = New-Object byte[] 10025
+                                [byte[]]$inStream = New-Object byte[] 200KB
                                 $buffSize = $client.ReceiveBufferSize
                                 $return = $serverstream.Read($inStream, 0, $buffSize)
                                 If ($return -gt 0) {

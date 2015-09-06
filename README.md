@@ -1,6 +1,6 @@
 PoshChat
 ========
-PoshChat V.1.0
+PoshChat V.1.1
 
 This release of PoshChat includes two files:
 Start-PoshChatServer.ps1

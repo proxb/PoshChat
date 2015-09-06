@@ -77,7 +77,7 @@ $NewConnectionTimer = Register-ObjectEvent -SourceIdentifier NewConnectionTimer 
                     $serverstream = $Client.GetStream()
                     #While client is connected to server, check for incoming traffic
                     While ($True) {                                              
-                        [byte[]]$inStream = New-Object byte[] 10025
+                        [byte[]]$inStream = New-Object byte[] 200KB
                         $buffSize = $client.ReceiveBufferSize
                         $return = $serverstream.Read($inStream, 0, $buffSize)  
                         If ($return -gt 0) {
@@ -190,7 +190,7 @@ $sb = {
     Out-File -Inputobject ("{0} >> Server Started on port 15600" -f (Get-Date).ToString()) -FilePath $EnableLogging
 } 
  while($true) {
-    [byte[]]$byte = New-Object byte[] 1024
+    [byte[]]$byte = New-Object byte[] 5KB
     $client = $Listener['listener'].AcceptTcpClient()
     If ($client -ne $Null) {
         $stream = $client.GetStream()
