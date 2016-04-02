@@ -6,12 +6,18 @@ This release of PoshChat includes two files:
 Start-PoshChatServer.ps1
 Start-PoshChatClient.ps1
 
-To start the server:
+####Usage
+
+#####To start the server:
 Simply run the Start-PoshChatServer.ps1 to initiate the server operation.
 Currently, the server operates under port 15600. This can be changed but is not recommended at this time. 
 
-To start the client:
-Run the Start-PoshChatClient.ps1 script to bring up the Chat Client window. Type in a username in the Username field and the Server IP/Hostname
+#####To start the client:
+Run the Start-PoshChatClient.ps1 script to bring up the Chat Client window. 
+
+![Chat Client UI](https://raw.githubusercontent.com/1RedOne/PoshChat/master/img/chatClient.png)
+
+Type in a username in the Username field and the Server IP/Hostname
 in the Server field and click connect. The chat client uses a dynamic port for its local connection and connects to remote port 15600.
 
 Once connected to the server, you can see all other connected clients in the right hand frame. As new clients join and leave, the frame will update accordingly.
@@ -29,6 +35,10 @@ You can now send a direct message to a user by appending the "@" and then their 
 > @User Hello there!
 
 You can adjust the font size of the chat client by using the Edit>Font context menu. This is mostly a placeholder for that setting until I have finished the Options menu.
+
+You can also save `.txt` file transcripts of your chat conversations, by clicking File \ Save Transcripts
+
+![Chat Client UI](https://raw.githubusercontent.com/1RedOne/PoshChat/master/img/SaveTranscripts.png)
 
 #####Text Color:
 
