@@ -23,7 +23,7 @@ $handle = $ps.AddScript({
         <Window
             xmlns='http://schemas.microsoft.com/winfx/2006/xaml/presentation'
             xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'
-            x:Name='AboutWindow' Title='About' Height = '170' Width = '330' ResizeMode = 'NoResize' WindowStartupLocation = 'CenterScreen' ShowInTaskbar = 'False'>    
+            x:Name="AboutWindow" Title="About" Height = "170" Width = "330" ResizeMode = "NoResize" WindowStartupLocation = "CenterScreen" ShowInTaskbar = "False">    
                 <Window.Background>
                 <LinearGradientBrush StartPoint='0,0' EndPoint='0,1'>
                     <LinearGradientBrush.GradientStops> <GradientStop Color='#C4CBD8' Offset='0' /> <GradientStop Color='#E6EAF5' Offset='0.2' /> 
